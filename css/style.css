@@ -339,7 +339,15 @@ hr{display: block;height: 1px;border: 0;border-top: 1px solid #ccc;margin: 1rem 
   color: white;
 }
 
-
+.todo-pending .icon, .todo-done .icon {
+  border: 1px solid #2ebd59;
+  padding: 0 10px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
 
 
 

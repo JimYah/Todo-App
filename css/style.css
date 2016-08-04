@@ -378,7 +378,8 @@ hr{display: block;height: 1px;border: 0;border-top: 1px solid #ccc;margin: 1rem 
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 650px) {
+
   .light-box .user-title {
     position: absolute;
     top: 50%;
@@ -416,6 +417,30 @@ hr{display: block;height: 1px;border: 0;border-top: 1px solid #ccc;margin: 1rem 
     text-align: center;
     margin-right: 5px;
   }
+
+  .add-todo .todo-form input[type="text"], .add-todo .todo-updata input[type="text"] {
+    width: 180px;
+    height: 50px;
+    border: 2px solid #2ebd59;
+    padding-left: 10px;
+    font-size: 15px;
+    margin-right: 5px;
+    vertical-align: top;
+  }
+
+  .add-todo .todo-form input[type="submit"], .add-todo .todo-updata input[type="submit"] {
+    display: inline-block;
+    width: 60px;
+    height: 55px;
+    line-height: 20px;
+    border: 2px solid #2ebd59;
+    font-size: 15px;
+    vertical-align: top;
+    background-color: inherit;
+    text-align: center;
+    margin-right: 5px;
+  }
+
 }
 
 @media only screen and (max-width: 423px) {
@@ -469,7 +494,7 @@ hr{display: block;height: 1px;border: 0;border-top: 1px solid #ccc;margin: 1rem 
   .add-todo .todo-form input[type="submit"], .add-todo .todo-updata input[type="submit"] {
     display: inline-block;
     width: 60px;
-    height: 55px;
+    height: 60px;
     line-height: 20px;
     border: 2px solid #2ebd59;
     font-size: 15px;

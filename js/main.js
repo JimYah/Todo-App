@@ -17,7 +17,7 @@ $(document).ready(function() {
   // 移除待辦事項
   $('.todo-content .todo-all').on('click', '.fa-trash', function() {
     todo_id = $(this).parent().parent().attr('class');
-    alert(todo_id);
+    
     $(this).parent().parent().fadeOut(1000, function() {
       $(this).remove();
       many_todo();

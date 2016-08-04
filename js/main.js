@@ -18,11 +18,14 @@ $(document).ready(function() {
   $('.todo-content .todo-all').on('click', '.fa-trash', function() {
     todo_id = $(this).parent().parent().attr('class');
     alert(todo_id);
-    $(this).parent().parent().remove();
+    $(this).parent().parent().fadeOut(1000, function() {
+      $(this).remove();
+      many_todo();
+    });
     $('.todo-pending .' + todo_id).remove();
     $('.todo-done .' + todo_id).remove();
     counter = counter - 1;
-    many_todo();
+
   });
 
   $('.todo-content .todo-all').on('click', '.fa-pencil', function() {
@@ -149,7 +152,10 @@ $(document).ready(function() {
     var text = $(this).parent().parent().children('p').text();
     todo_id = $(this).parent().parent().attr('class');
 
-    $(this).parent().parent().remove();
+    $(this).parent().parent().fadeOut(1000, function() {
+      $(this).remove();
+      many_todo();
+    });
     $('.todo-content .todo-done').append('<li class='+ todo_id +'><p>'+ text +'</p><div class="icon"><p>NO DONE?</p></div></li>');
     many_todo();
   });
@@ -158,9 +164,12 @@ $(document).ready(function() {
     var text = $(this).parent().parent().children('p').text();
     todo_id = $(this).parent().parent().attr('class');
 
-    $(this).parent().parent().remove();
+    $(this).parent().parent().fadeOut(1000, function() {
+      $(this).remove();
+      many_todo();
+    });
     $('.todo-content .todo-pending').append('<li class='+ todo_id +'><p>'+ text +'</p><div class="icon"><p> DONE?</p></div></li>');
-    many_todo();
+    
   });
 
   // 輸入使用者名稱
@@ -173,7 +182,7 @@ $(document).ready(function() {
     if(text.length !== 0) {
       $('.title h1').text(text + '的待辦清單');
       $('.title-form .title-field').val('');
-      $('.light-box').remove();
+      $('.light-box').slideUp(500);
     } else {
       alert('請輸入您的使用者名稱');
       $('.title-form .title-field').focus();
@@ -191,7 +200,7 @@ $(document).ready(function() {
       e.preventDefault();
       $('.title h1').text(text + '的待辦清單');
       $('.title-form .title-field').val();
-      $('.light-box').remove();
+      $('.light-box').slideUp(500);
     } else {
       if(e.keyCode == 13 && text.length == 0) {
         alert('請輸入您的使用者名稱');

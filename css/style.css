@@ -557,7 +557,7 @@ hr{display: block;height: 1px;border: 0;border-top: 1px solid #ccc;margin: 1rem 
     vertical-align: top;
     appearance: none;
     background-color: inherit;
-    text-align: center;
+    text-align: left;
     margin-right: 5px;
   }
 

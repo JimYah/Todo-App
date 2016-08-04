@@ -443,7 +443,7 @@ hr{display: block;height: 1px;border: 0;border-top: 1px solid #ccc;margin: 1rem 
 
 }
 
-@media only screen and (max-width: 423px) {
+@media only screen and (max-width: 430px) {
 
   .light-box {
     padding: 0;
